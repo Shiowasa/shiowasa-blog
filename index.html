@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Blog</title>
+
+  <!-- IPログを記録（非表示） -->
+<img src="iplog.php" style="display:none;" alt="">
+
+  <style>
+    /* ===== 共通設定 ===== */
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Hiragino Kaku Gothic ProN", sans-serif;
+      color: #2f3e46;
+      background-color: #e9eef2;
+      line-height: 1.7;
+    }
+
+    a {
+      color: #3a6ea5;
+      text-decoration: none;
+    }
+
+    /* ===== ヘッダー（TOP） ===== */
+    .hero {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60vh;
+      background-image: url("images/FC3S.JPEG"); /* ←画像パスを確認 */
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      main{
+        margin-top: 60vh;
+      }
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(40, 60, 80, 0.55);
+    }
+
+    .hero h1 {
+      position: relative;
+      color: #ffffff;
+      font-size: 2.5rem;
+      text-align: center;
+      margin: 0;
+    }
+
+    /* ===== コンテンツ ===== */
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      color: #344e63;
+    }
+
+    /* ===== フッター ===== */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #344e63;
+      color: #ffffff;
+      font-size: 0.9rem;
+    }
+
+    /* ===== スマホ対応 ===== */
+    @media (max-width: 600px) {
+      .hero {
+        height: 45vh;
+      }
+
+      .hero h1 {
+        font-size: 1.8rem;
+        padding: 0 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP -->
+  <header class="hero">
+    <h1>しおわさの日常</h1>
+  </header>
+
+  <!-- メイン -->
+  <main class="container">
+
+    <section class="card">
+      <h2>はじめまして</h2>
+      
+       <p>VS Codeを使って練習がてらブログを作ってみました</p>
+       <p>独学だから不安しかないけど…</p>
+       <p>すこーしづつ頑張ってみようかな。</p>
+
+      <a href="posts2/2026-01-21.html">続きを読む →</a>
+    </section>
+
+    <section class="card">
+      <h2>自己紹介</h2>
+
+      <p>自己紹介</p>
+    
+      <a href="posts2/自己紹介.html">続きを読む →</a>
+    </section>    
+
+    <section class="card">
+      <h2>わたしのこと</h2>
+      
+       <p>私の趣味</p>
+       <p>主に、車・ゲーム・機械いじり…</p>
+       <br><br>
+
+      <a href="posts2/趣味のこと.html">続きを読む →</a>
+    </section>
+
+    <section class="card">
+      <h2>楽しい</h2>
+      
+       <p>ちょっと懐かしい日々を思い出しました…</p>
+
+       <br><br>
+
+      <a href="posts2/2026-01-22.html">続きを読む →</a>
+    </section>
+
+    <section class="card">
+      <h2>わが子自慢</h2>
+      
+       <p>理解のある娘…</p>
+       <p>母の趣味をよくわかっていらっしゃる</p>
+       <br><br>
+
+      <a href="posts2/2026-02-09.html">続きを読む →</a>
+        </section>
+
+    <section class="card">
+      <h2>すきなもの</h2>
+
+      <p>日々増えていくグッズたち</p>
+      <p>どうしてもこれだけは手にしたいと思ってしまった…</p>
+
+      <a href="posts2/はぐれメタル.html">続きを読む →</a>
+    </section>
+
+    <article class="card">
+      <h2>すきなもの2</h2>
+
+      <p class="posts-date">2026-02-23</p>
+
+      <p>葬送のフリーレン</p>
+
+      <a href="posts2/好きなもの2.html">続きを読む →</a>
+    </article>
+
+        <article class="card">
+          <h2>職業訓練校申し込み</h2>
+    
+          <p class="posts-date">2026-02-24</p>
+    
+          <p>初めて職業訓練校に申し込みます</p>
+          <p>ちょっとドキドキ…</p>
+    
+          <a href="posts2/職業訓練所申し込み.html">続きを読む →</a>
+        </article>
+    
+        <article class="card">
+          <h2>茶筒</h2>
+    
+          <p class="posts-date">2026-02-25</p>
+    
+          <p>皆さんのご自宅にも何か日本的伝統文化を感じられる貴重なお品がありますか？</p>
+        
+    
+          <a href="posts2/茶筒">続きを読む →</a>
+        </article>
+
+  </main>
+
+  <!-- フッター -->
+  <footer>
+    © 2026 My Blog
+  </footer>
+
+</body>
+</html>
