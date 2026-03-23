@@ -18,7 +18,7 @@ label, input, textarea, select, button {
 
 
 
-.body{
+body{
     margin: 0;
     font-family: 'Yu Gothic Medium', 'Yu Gothic', sans-serif;
     background-color: #e9eef2;
@@ -64,10 +64,11 @@ button
     text-decoration: none;
     border-radius: 5px;
     box-shadow: 5px 5px 0 #bbb;    
-    transition: box-shadow 0.25s;
+    transition: box-shadow 0.25s, transform 0.25s;
 }
 .button:hover{
-    box-shadow: 0 0 0 #bbb;   
+    box-shadow: 0 0 0 #bbb;
+    transform: translate(5px, 5px);   
 }
 .button.button-submission{
     background: #92d3ca;
