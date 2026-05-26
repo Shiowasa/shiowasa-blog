@@ -3,58 +3,15 @@
 /*
 base style
 */
-body {
-    font-family: 'Noto Sans JP', sans-serif, "Helvetica Neue", "Helvetica", "Hiragino Sans", "Arial", "Yu Gothic", "Meiryo", sans-serif;
-    font-size: 15px;
-    line-height: 1.5;
-    color: #333;
-}
+
 label, input, textarea, select, button {
     cursor: pointer;
 }
-.button{
-    border: 0;
-}
-
-
-
-body{
-    margin: 0;
-    font-family: 'Yu Gothic Medium', 'Yu Gothic', sans-serif;
-    background-color: #e9eef2;
-    color: #2f3e46;
-    line-height: 1.8;
-}
-.container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-.card {
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-}
-
-.post-date {
-    color: #6c7a89;
-    font-size: 0.9rem;
-    margin-bottom: 24px;
-}
-
-.a {
-    color: #3a6ea5;
-    text-decoration: none;
-}
-
-
-
 /*
 button
 */
 .button{
+    border: 0;
     display: inline-block;
     color: #fff;
     font-weight: bold;
@@ -73,3 +30,117 @@ button
 .button.button-submission{
     background: #92d3ca;
 }
+
+@media (max-width: 600px){
+.button{
+    padding: 12px 30px;
+}
+}
+
+
+a {
+    color: #3a6ea5;
+    text-decoration: none;
+}
+
+/*
+ヘッダー（TOP）＝もしかしたらheroに干渉するかも＝
+*/
+.main{
+    margin-top: 60vh;
+}
+.hero {
+    /* position: fixed;＝relativeと検討する＝ */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60vh;
+    background-image: url("images/FC3S.JPEG"); /* ←画像パスを確認 */
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(40, 60, 80, 0.55);
+}
+
+.hero h1 {
+    position: relative;
+    color: #ffffff;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 0;
+}
+
+
+/*
+コンテンツ
+*/
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #344e63;
+}
+
+/*
+フッター
+*/
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #344e63;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+/*
+スマホ対応
+*/
+@media (max-width: 600px) {
+.hero {
+    height: 45vh;
+}
+
+.hero h1 {
+    font-size: 1.8rem;
+    padding: 0 10px;
+}
+}
+
+body{
+    margin: 0;
+    font-family: 'Yu Gothic Medium', 'Yu Gothic', sans-serif;
+    background-color: #e9eef2;
+    color: #2f3e46;
+    line-height: 1.8;
+}
+
+.post-date {
+color: #6c7a89;
+font-size: 0.9rem;
+margin-bottom: 24px;
+}
+
+
+
